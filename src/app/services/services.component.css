@@ -3,4 +3,26 @@ body{
 }
 a{
     text-decoration: none;
+    /* text-align: center; */
+}
+.container{
+    background-color: lavender;
+    padding: 30px;
+    margin-top: 55px;
+}
+
+.col{
+    padding: 30px;
+    text-align: center;
+}
+.p-5{
+    height: 250px;
+    box-shadow: 0 0 6px #000;
+}
+.p-5:hover{
+    box-shadow: 0 0 10px #000;
+}
+img{
+    width: 100%;
+    
 }
