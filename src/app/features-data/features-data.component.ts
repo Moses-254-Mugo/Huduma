@@ -9,7 +9,7 @@ import { FeaturesServiceService } from '../features-service.service';
 })
 export class FeaturesDataComponent implements OnInit {
 
-  myFeatures: Features[] = [];
+  myFeatures:any
 
   constructor(public feature_service: FeaturesServiceService) { }
 
@@ -17,7 +17,8 @@ export class FeaturesDataComponent implements OnInit {
     this.feature_service.getFeatures(searchTerm).subscribe((data) =>{
       this.myFeatures=data['features'];
       console.log(this.myFeatures)
-      // console.log(typeof(this.myFeatures))
+      console.log(typeof(this.myFeatures))
+    
     });
   }
 
