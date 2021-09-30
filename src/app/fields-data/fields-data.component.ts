@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FieldsServiceService } from '../fields-service.service';
+import { Fields } from '../fields';
 
 @Component({
   selector: 'app-fields-data',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FieldsDataComponent implements OnInit {
 
-  constructor() { }
+  myFields: Fields[] = [];
 
-  ngOnInit(): void {
+
+  constructor(public field_service: FieldsServiceService) { }
+
+  getFields(searchTerm:any){
+    this.field_service.getFields(searchTerm).subscribe((data) => {
+      this.myFields=[];
+      this.myFields.push(data);
+      console.log(this.myFields)
+    })
+  }
+
+  ngOnInit(){
+    this.getFields("")
   }
 
 }
