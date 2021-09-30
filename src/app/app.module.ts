@@ -9,8 +9,10 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ServicesComponent } from './services/services.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { FieldsDataComponent } from './fields-data/fields-data.component';
 import { FeaturesDataComponent } from './features-data/features-data.component';
+import { FeaturesServiceService } from './features-service.service'
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -21,14 +23,15 @@ import { FeaturesDataComponent } from './features-data/features-data.component';
     ServicesComponent,
     LoginComponent,
     SignupComponent,
-    FieldsDataComponent,
     FeaturesDataComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [FeaturesServiceService  ],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

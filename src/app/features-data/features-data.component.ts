@@ -15,8 +15,9 @@ export class FeaturesDataComponent implements OnInit {
 
   getFeatures(searchTerm:any){
     this.feature_service.getFeatures(searchTerm).subscribe((data) =>{
-      this.myFeatures=data;
+      this.myFeatures=data['features'];
       console.log(this.myFeatures)
+      // console.log(typeof(this.myFeatures))
     });
   }
 

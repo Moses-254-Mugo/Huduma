@@ -13,6 +13,6 @@ export class FeaturesServiceService {
 
   constructor(public http: HttpClient) { }
    getFeatures(searchTerm: string): Observable<any>{
-     return this.http.get(this._URL + searchTerm + '/features'+ this.token);
+     return this.http.get(this._URL + searchTerm+ this.token);
    }
 }
