@@ -10,6 +10,7 @@ import { ServicesComponent } from './services/services.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { FieldsDataComponent } from './fields-data/fields-data.component';
+import { FeaturesDataComponent } from './features-data/features-data.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FieldsDataComponent } from './fields-data/fields-data.component';
     ServicesComponent,
     LoginComponent,
     SignupComponent,
-    FieldsDataComponent
+    FieldsDataComponent,
+    FeaturesDataComponent
   ],
   imports: [
     BrowserModule,
